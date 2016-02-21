@@ -116,6 +116,12 @@ describe ResponseFormatter do
       end
     end
     
+    describe '#sky_store_total' do
+      it "returns the total customer's sky store spend" do
+        expect(formatter.sky_store_total).to eql(24.97)
+      end
+    end
+    
     
   end
 end

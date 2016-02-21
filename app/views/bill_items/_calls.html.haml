@@ -1,0 +1,20 @@
+.col-xs-12
+  %h3.pod-title Calls
+  %p.intro.smaller
+    %span.medium
+      Total Cost of Calls:
+    %span.demo-pink
+      =number_to_currency(@formatted_response.calls_cost, unit:"£")
+  %h3.pod-title.smaller.text--secondary Breakdown of Calls
+  %table.table
+    %thead
+      %tr
+        %th Number Called
+        %th Duration
+        %th Cost
+    %tbody
+      -@formatted_response.calls.each do |call|       
+        %tr
+          %td=call["called"]
+          %td=call["duration"]
+          %td="#{number_to_currency(call["cost"], unit:"£")}"

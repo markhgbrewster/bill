@@ -1,19 +1,87 @@
 body{
   font: 16px/20px SkyTextRegular,Helvetica,Arial,sans-serif;
+  color: #333333;
+}
+
+img{
+  &.logo{
+    margin-top: 10px;
+  }
 }
 
 .demo-version {
-    font-size: 0.5em;
+  font-size: 0.5em;
 }
 
 .text--secondary {
-    color: #666666;
+  color: #666666;
 }
 
+p {
+    line-height: 20px;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    
+    &.intro {
+      font-size: 24px;
+      line-height: 28px;
+    
+      &.smaller {
+          font-size: 20px;
+          line-height: 24px;
+      }
+    }
+}
+
+.medium {
+  font-family: SkyTextMedium,Helvetica,Arial,sans-serif;
+}
+
+.demo-blue {
+  color: #5cacb6;
+}
+
+.demo-pink {
+    color: #ed0677;
+}
+
+h2{ 
+  &.section-title {
+    font-size: 44px;
+    line-height: 48px;
+    margin: 20px 0;
+  }
+}
+
+h1{
+  &.cluster_article_title {
+      margin-top: 0;
+      font-size: 44px;
+  }
+
+  &.cluster_title {
+      font-size: 52px;
+      line-height: 56px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      display: block;
+      padding-bottom: 0.3em;
+      border-bottom: 2px solid #f4f4f4;
+  }
+}
 h3{
    &.pod-title {
       font-size: 32px;
       line-height: 36px;
       margin: 20px 0;
+      &.smaller {
+        font-size: 28px;
+        line-height: 32px;
+      }
   }
+  
+
 }

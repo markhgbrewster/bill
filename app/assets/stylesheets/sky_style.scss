@@ -13,10 +13,21 @@ img{
   font-size: 0.5em;
 }
 
+.cluster_title {
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #f4f4f4;
+}
+
 .demo-blue {
   color: #5cacb6;
 }
 
 .demo-pink {
-    color: #ed0677;
+  color: #ed0677;
+}
+
+@media (max-width: 440px) {
+  .demo-version {
+      font-size: 0.35em;
+  }
 }

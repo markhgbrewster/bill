@@ -1,3 +1,22 @@
 .container
   .col-xs-12
-    Your Bill
+    %span
+      %h1.heading 
+        Your Statement
+        %small.demo-version.text--secondary= "(for the period #{@formatted_response.start_date} to #{@formatted_response.end_date})"
+    ="Generated on #{@formatted_response.generated}"
+    %h4="The total cost of £#{@formatted_response.total_cost} is due by #{@formatted_response.due_date}"
+  .col-xs-12
+    %h3.pod-title Subscriptions
+    %table.table
+      %thead
+        %tr
+          %th Type
+          %th Name
+          %th Costs
+      %tbody
+        -@formatted_response.subscriptions.each do |subscription|       
+          %tr
+            %td=subscription["type"]
+            %td=subscription["name"]
+            %td=subscription["cost"]

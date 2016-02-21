@@ -1,7 +1,8 @@
-.container
-  .col-xs-12
+.skycom-container
+  .skycom-12
     =image_tag("http://assets.sky.com/dist/1273/static/sky-logo-redesign.png", alt: "Sky Logo", class: "logo")
-  .col-xs-12
+.skycom-container
+  .skycom-12
     %h1.cluster_title 
       Your Statement
       %small.demo-version.text--secondary.cluster_title= "(#{@formatted_response.start_date} to #{@formatted_response.end_date})"
@@ -19,10 +20,9 @@
         is due by
       %span.demo-blue 
         =@formatted_response.due_date
+.skycom-container
   = render partial: 'subscriptions'
+.skycom-container
   = render :partial => 'sky_store'
+.skycom-container
   = render :partial => 'calls'
-
-
-
-          

@@ -1,4 +1,4 @@
-.col-xs-12
+.skycom-12
   %h3.pod-title Calls
   %p.intro.smaller
     %span.medium
@@ -14,7 +14,8 @@
         %th
           .medium Duration
         %th
-          .medium Cost
+          .pull-right
+            .medium Cost
     %tbody
       -@formatted_response.calls.each do |call|       
         %tr
@@ -23,4 +24,5 @@
           %td
             =call["duration"]
           %td
-            ="#{number_to_currency(call["cost"], unit:"£")}"
+            .pull-right
+              ="#{number_to_currency(call["cost"], unit:"£")}"

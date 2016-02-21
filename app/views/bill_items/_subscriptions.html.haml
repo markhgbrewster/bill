@@ -1,4 +1,4 @@
-.col-xs-12
+.skycom-12
   %h3.pod-title Subscriptions
   %p.intro.smaller
     %span.medium
@@ -13,8 +13,9 @@
           .medium Type
         %th 
           .medium Name
-        %th 
-          .medium Cost
+        %th
+          .pull-right 
+            .medium Cost
     %tbody
       -@formatted_response.subscriptions.each do |subscription|       
         %tr
@@ -23,4 +24,5 @@
           %td
             =subscription["name"]
           %td
-            ="#{number_to_currency(subscription["cost"], unit:"£")}"
+            .pull-right
+              ="#{number_to_currency(subscription["cost"], unit:"£")}"

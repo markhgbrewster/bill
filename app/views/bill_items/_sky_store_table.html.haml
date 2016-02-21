@@ -3,12 +3,14 @@
     %tr
       %th 
         .medium Title
-      %th 
-        .medium Cost
+      %th
+        .pull-right
+          .medium Cost
   %tbody
     -purcheses.each do |purchase|       
       %tr
         %td
           =purchase["title"]
         %td
-          ="#{number_to_currency(purchase["cost"], unit:"£")}"
+          .pull-right
+            ="#{number_to_currency(purchase["cost"], unit:"£")}"

@@ -17,26 +17,7 @@
       %span.demo-blue 
         =@formatted_response.due_date
   = render partial: 'subscriptions'
-  .col-xs-12
-    %h3.pod-title Sky Store
-    %p.intro.smaller
-      %span.medium
-        Total spent in the SkyStore:
-      %span.demo-pink
-        =number_to_currency(@formatted_response.total_subscriptions_cost, unit:"£")
-    %h3.pod-title.smaller.text--secondary Breakdown of Rentals
-    %table.table
-      %thead
-        %tr
-          %th Type
-          %th Name
-          %th Cost
-      %tbody
-        -@formatted_response.subscriptions.each do |subscription|       
-          %tr
-            %td=subscription["type"]
-            %td=subscription["name"]
-            %td="#{number_to_currency(subscription["cost"], unit:"£")}"
+  = render :partial => 'sky_store'
   = render :partial => 'calls'
 
 

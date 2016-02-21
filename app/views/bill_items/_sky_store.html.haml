@@ -1,0 +1,13 @@
+.col-xs-12
+  %h3.pod-title Sky Store
+  %p.intro.smaller
+    %span.medium
+      Total spent in the SkyStore:
+    %span.demo-pink
+      =number_to_currency(@formatted_response.sky_store_total, unit:"£")
+.col-md-6.col-sm-12
+  %h3.pod-title.smaller.text--secondary Breakdown of Rentals Titles
+  = render partial: 'sky_store_table', locals: { purcheses: @formatted_response.rentals }
+.col-md-6.col-sm-12
+  %h3.pod-title.smaller.text--secondary Breakdown of Bought Titles
+  = render partial: 'sky_store_table', locals: { purcheses: @formatted_response.buy_and_keeps }

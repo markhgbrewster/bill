@@ -1,0 +1,10 @@
+%table.table
+  %thead
+    %tr
+      %th Title
+      %th Cost
+  %tbody
+    -purcheses.each do |purchase|       
+      %tr
+        %td=purchase["title"]
+        %td="#{number_to_currency(purchase["cost"], unit:"£")}"

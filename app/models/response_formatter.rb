@@ -7,19 +7,19 @@ class ResponseFormatter
   end
   
   def generated
-    format_date_string(response["statement"]["generated"]) if response["statement"].present?
+    format_date_string(response["statement"]["generated"])
   end
 
   def due_date
-     format_date_string(response["statement"]["due"]) if response["statement"].present?
+     format_date_string(response["statement"]["due"])
   end
   
   def start_date
-    format_date_string(response["statement"]["period"]["from"]) if response["statement"].present? && response["statement"]["period"].present?
+    format_date_string(response["statement"]["period"]["from"])
   end
   
   def end_date
-    format_date_string(response["statement"]["period"]["to"]) if response["statement"].present? && response["statement"]["period"].present?
+    format_date_string(response["statement"]["period"]["to"])
   end
   
   def total_cost
@@ -27,31 +27,31 @@ class ResponseFormatter
   end
   
   def subscriptions
-    response["package"]["subscriptions"] if response["package"].present?
+    response["package"]["subscriptions"] 
   end
   
   def total_subscriptions_cost
-    response["package"]["total"] if response["package"].present?
+    response["package"]["total"]
   end
   
   def calls
-    response["callCharges"]["calls"] if response["callCharges"].present?
+    response["callCharges"]["calls"]
   end
   
   def calls_cost
-     response["callCharges"]["total"] if response["callCharges"].present?
+     response["callCharges"]["total"]
   end
   
   def rentals
-    response["skyStore"]["rentals"] if response["skyStore"].present?
+    response["skyStore"]["rentals"]
   end
   
   def buy_and_keeps
-    response["skyStore"]["buyAndKeep"] if response["skyStore"].present?
+    response["skyStore"]["buyAndKeep"]
   end
   
   def sky_store_total
-    response["skyStore"]["total"] if response["skyStore"].present?
+    response["skyStore"]["total"]
   end
   
   private

@@ -2,12 +2,12 @@
   %h3.pod-title Sky Store
   %p.intro.smaller
     %span.medium
-      Total spent in the SkyStore:
+      Total spent in the Sky Store:
     %span.demo-pink
       =number_to_currency(@formatted_response.sky_store_total, unit:"£")
 .col-md-6.col-sm-12
-  %h3.pod-title.smaller.text--secondary Breakdown of Rentals Titles
+  %h3.pod-title.smaller.text--secondary  Rented Titles
   = render partial: 'sky_store_table', locals: { purcheses: @formatted_response.rentals }
 .col-md-6.col-sm-12
-  %h3.pod-title.smaller.text--secondary Breakdown of Bought Titles
+  %h3.pod-title.smaller.text--secondary Bought Titles
   = render partial: 'sky_store_table', locals: { purcheses: @formatted_response.buy_and_keeps }

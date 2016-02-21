@@ -9,12 +9,18 @@
   %table.table
     %thead
       %tr
-        %th Type
-        %th Name
-        %th Cost
+        %th 
+          .medium Type
+        %th 
+          .medium Name
+        %th 
+          .medium Cost
     %tbody
       -@formatted_response.subscriptions.each do |subscription|       
         %tr
-          %td=subscription["type"]
-          %td=subscription["name"]
-          %td="#{number_to_currency(subscription["cost"], unit:"£")}"
+          %td
+            =subscription["type"]
+          %td
+            =subscription["name"]
+          %td
+            ="#{number_to_currency(subscription["cost"], unit:"£")}"

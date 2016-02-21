@@ -10,6 +10,8 @@ Then enter 'rails s' and navigate to http://localhost:3000/ in your browser
   To run rspec tests type 'bundle exec rspec spec'
   to run the cucumber tests type 'bundle exec cucumber'
 
-
+# Other Information
+  A deployed version of the app can be found here https://enigmatic-cove-51801.herokuapp.com/
+  the source code can be found here https://github.com/markhgbrewster/bill
 
 
